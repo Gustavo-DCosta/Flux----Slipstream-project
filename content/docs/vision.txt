@@ -1,0 +1,46 @@
+We want to make a system that allows us to see what the car sees
+So we will be using a picamera v2 with a pi zero W
+
+We made sure to pick the lowest latency hungry protocol to make sure we could have a 
+good time between the car and the browser
+
+With WebRTC on the worst case scenario we get 500ms, traveling at 50km/h that gives a difference of 7meters of what the car
+sees and what we see
+Explanation:
+-> 50km.h = 14m.s 
+-> 500ms = 0,5s if the car at 50km.h travels 14meters per second then half a second it travels 7 meters
+
+
+However that is a very big difference, so we will try to keep the latency at 100ms, that gives 1 meter of difference
+
+How does WebRTC works?
+
+> WebRTC is both a protocol and an API, it allows bi-directional real time communication meaning that the senders talks 
+with the receiver and vice-versa, the API is specified only in JS
+
+> To make it simple the protocol consist of 4 steps or stages
+    -*  Signaling
+    -*  Connecting
+    -*  Securing 
+    -*  Communicating
+
+They are sequesntial meaning the precedent step must be 100% working.
+FUN FACT: each step is a bunch of nested protocols
+
+We will use the method peer to peer of the WebRTC protocol
+When a WebRTC agent starts, to know to whom comunicate he signales with a protocol called SDP (Session Description Protocol)
+
+which is a plain texte protocol and has key: value pair elements 
+with some media
+• The IPs and Ports that the agent is reachable on (candidates).
+• The number of audio and video tracks the agent wishes to send.
+• The audio and video codecs each agent supports.
+• The values used while connecting (uFrag/uPwd).
+• The values used while securing (certificate fingerprint)
+
+Keep in mind that those process are considered "out of band" which means that the engeneer itself has to code the layers for 
+agents to talk to eachother
+WebRTC doesn't care about the channell of information cross-over, we are free to use endpoints websocketps 
+TCP, UDP, a piegon anything
+
+You will use the infrasctucture of the application choossen to facilitate trading SDPs between the clients
