@@ -1,0 +1,1 @@
+print("hello world, this is running in a golang source code\nAnd yeah uhm I want to get the ouput")

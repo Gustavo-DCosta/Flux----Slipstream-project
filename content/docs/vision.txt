@@ -44,3 +44,4 @@ WebRTC doesn't care about the channell of information cross-over, we are free to
 TCP, UDP, a piegon anything
 
 You will use the infrasctucture of the application choossen to facilitate trading SDPs between the clients
+
