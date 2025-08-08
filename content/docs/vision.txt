@@ -45,3 +45,8 @@ TCP, UDP, a piegon anything
 
 You will use the infrasctucture of the application choossen to facilitate trading SDPs between the clients
 
+We can't just give the other person our public adress, because of a possible FireWall a possible VPN or even NAT
+Network Adress Translation
+
+With a public adress we don't hit a device we hit a router
+But STUN servers can, and google as a lot of stun servers (STUN stands for simple transversal of UDP trought NAT)

@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"net/http"
 )
@@ -11,4 +12,5 @@ func main() {
 		log.Fatal(err)
 	}
 
+	fmt.Println("Server running on 127.0.0.1:8080")
 }
