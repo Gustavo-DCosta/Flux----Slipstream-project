@@ -1,0 +1,7 @@
+> The car has to go until 50km/h
+> It has to have an autonomy of 30mins
+> It has to be remote controlled until a distance of 500meters
+> I want the car to be able to make sharp turns at high speeds
+> But also have efficiency breaking
+> Steering system
+> Physical and digital breaking system

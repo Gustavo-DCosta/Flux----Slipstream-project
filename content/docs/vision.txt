@@ -1,3 +1,5 @@
+https://youtu.be/g42yNO_dxWQ?si=l15Sp0yM5ZBfY7XC
+
 We want to make a system that allows us to see what the car sees
 So we will be using a picamera v2 with a pi zero W
 
